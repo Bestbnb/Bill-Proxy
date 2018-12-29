@@ -1,0 +1,113 @@
+/* Next rule will outline ***ALL*** elements */
+/* * {
+  outline: 1px solid darkgrey;
+} */
+
+.quarter {
+  padding: 0 !important;
+}
+
+.half {
+  padding-left: 0 !important;
+  padding-right: 0 !important
+}
+
+.half, .quarter {
+  overflow: hidden;
+  border: 1px solid #484848;  /* rgb(72, 72, 72) charcoal */
+  background-color: #484848;  /* charcoal */
+}
+
+.overlay-img{
+  opacity: 0.65;
+}
+
+.non-overlay-img {
+  opacity: 1;
+}
+
+.img-fluid:hover {
+  z-index: 2;
+  -webkit-transition: all 400ms ease-in;
+  -webkit-transform: scale(1.1);
+  -ms-transition: all 400ms ease-in;
+  -ms-transform: scale(1.1);
+  -moz-transition: all 400ms ease-in;
+  -moz-transform: scale(1.1);
+  transition: all 400ms ease-in;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.carousel {
+  position: fixed; 
+  /* display: none; */ /* Hidden by default */
+  width: 100%;  
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(72, 72, 72, 1.0); /* charcoal background with opacity */
+  z-index: 2;   /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.hide-carousel {
+  display: none
+}
+.show-carousel {
+  display: block;
+  display: flex;
+  align-items: center;
+}
+
+/* .image-slide {
+  position: 'fixed';
+  height: '70%';
+  width: '50%';
+  top: '12.5%';
+  left: '25%';
+  right: '0';
+  bottom: '0'; */
+  /* backgroundImage: url(${props.url})`; */
+  /* background-size: cover;
+  background-position: center;
+} */
+
+
+.close {
+  position: absolute;
+  top: 0em;
+  right: 0.125em;
+  color: white;
+  font-size: 4em;
+  padding: 0 14px;
+  border: 1px solid blue;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.fa-angle-right,
+.fa-angle-left {
+  color: white;
+  font-size: 9em;
+}
+
+.fa-angle-left {
+  position: absolute;
+  top: 36%;
+  left: 1%;
+}
+  
+.fa-angle-right {
+  position: absolute;
+  top: 36%;
+  right: 1%;
+}
+
+.fa-angle-left:hover,
+.fa-angle-right:hover {
+  cursor: pointer;
+}
