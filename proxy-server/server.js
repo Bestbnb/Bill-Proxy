@@ -26,6 +26,26 @@ app.get('/gallery', function(req, res) {
     });
 });
 
+app.get('/booking', function(req, res) {
+  axios.get('http://localhost:1337/booking')
+    .then(function (response) {
+        res.send(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+app.get('/bnb', function(req, res) {
+  axios.get('http://localhost:1337/bnb')
+    .then(function (response) {
+      res.send(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+
 app.listen(app.get('PORT'), function() {
   console.log(`Proxy Server running HARD on port ${app.get('PORT')}`);
 });
