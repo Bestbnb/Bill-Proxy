@@ -29,15 +29,59 @@ app.get('/gallery', function(req, res) {
 app.get('/booking', function(req, res) {
   axios.get('http://localhost:1337/booking')
     .then(function (response) {
-        res.send(response.data);
+      res.send(response.data);
     })
     .catch(function (error) {
       console.log(error);
     });
 });
+
 app.get('/bnb', function(req, res) {
   axios.get('http://localhost:1337/bnb')
     .then(function (response) {
+      res.send(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+// app.get('/home/:homeId', (req, res) => {
+//   axios.get('http://localhost:3002/home/:homeId')
+//     .then(function (response) {
+//       res.sendfile(response.data);
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+// });
+
+app.get('/home/:homeId/reviews', function(req, res) {
+  axios.get('http://localhost:3002/home/:homeId/reviews')
+    .then(function (response) {
+      res.send(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get('/map', function (req, res) {
+  axios.get('http://localhost:3001/map')
+    .then(function (response) {
+      // console.log('MAP response: ', response);
+      res.sendfile(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get('/recommendations', function (req, res) {
+  axios.get('http://localhost:3001/recommendations')
+    .then(function (response) {
+      console.log('*********************************************** \
+      RENDER response: ', response);
       res.send(response.data);
     })
     .catch(function (error) {
