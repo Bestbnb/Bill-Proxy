@@ -46,16 +46,6 @@ app.get('/bnb', function(req, res) {
     });
 });
 
-// app.get('/home/:homeId', (req, res) => {
-//   axios.get('http://localhost:3002/home/:homeId')
-//     .then(function (response) {
-//       res.sendfile(response.data);
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-// });
-
 app.get('/home/:homeId/reviews', function(req, res) {
   axios.get('http://localhost:3002/home/:homeId/reviews')
     .then(function (response) {
@@ -80,7 +70,6 @@ app.get('/map', function (req, res) {
 app.get('/recommendations', function (req, res) {
   axios.get('http://localhost:3001/recommendations')
     .then(function (response) {
-      console.log('*********************************************** \
       RENDER response: ', response);
       res.send(response.data);
     })
